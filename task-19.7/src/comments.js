@@ -1,5 +1,6 @@
-import {ADD_COMMENT} from './actions.js';
-import {addComment} from './actions.js';
+import {ADD_COMMENT, THUMB_UP_COMMENT} from './actions.js';
+import {addComment, thumbUpComment} from './actions.js';
+
 
 function comments(state = [], action) {
     switch(action.type) {
@@ -10,6 +11,13 @@ function comments(state = [], action) {
                 votes: 0
                 }
         , ...state];
+        case THUMB_UP_COMMENT:
+            return state.map(comment => {
+                if(comment.id === action.id) {
+                return {...comment, votes: comment.votes + 1}
+                }
+            return comment;
+            });
         default:
             return state;
     }
