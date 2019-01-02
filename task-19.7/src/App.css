@@ -26,3 +26,22 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+li {
+  list-style: none;
+}
+
+button {
+  color: #FFF;
+  margin: 5px;
+  border: 1px solid #000;
+  padding: 4px;
+}
+
+.buttonDown {
+  background-color: #c1001d;
+}
+
+.buttonUp {
+  background-color: #00ad28;
+}
